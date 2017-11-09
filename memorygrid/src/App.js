@@ -7,22 +7,22 @@ class Game extends Component {
         return(
             <div className = "Game">
                <div className="grid">
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
-               <div className="cell" style={{ width: '25%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
+               <div className="cell" style={{ width: '20%' }}></div>
              </div>
                     <button>
                       Start Game.
