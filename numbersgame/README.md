@@ -1,2 +1,2 @@
 ## Numbers Game.
-* How to build your own. 
+- Below are some of the steps on how to build your own. 
