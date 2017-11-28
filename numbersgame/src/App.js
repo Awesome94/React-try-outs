@@ -5,22 +5,23 @@ import './App.css';
 
 
 const Stars = (props) => {
+  const numberOfStars = 9;
+  let stars = [];
+  for (let i=0; i<numberOfStars; i++){
+  stars.push(<i className = "fa fa-star"></i>)
+  }
   return (
-  <div>
-  <i className = "fa fa-star"></i>
-  <i className = "fa fa-star"></i>
-  <i className = "fa fa-star"></i>
-  <i className = "fa fa-star"></i>
-  <i className = "fa fa-star"></i>
-  
+  <div className="col-5">
+  {stars}
   </div>
   )
   }
   
+  
   const Button = (props) => {
   return(
     <div>
-      <button>Equals</button>
+      <button>=</button>
     </div>
   )
   }
