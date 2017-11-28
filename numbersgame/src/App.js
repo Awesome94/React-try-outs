@@ -26,12 +26,14 @@ const Stars = (props) => {
   }
   
   const Answer = (props) => { 
-  return(
-  <div>
-    answer
-  </div>
-  );
-  }
+    return(
+    <div className="col-5">
+      {props.selectedNumbers.map((number, i) => 
+      <span key={i}>{number}</span>
+      )};
+    </div>
+    );
+    }
   // const Numbers = (props) => {
   //   return(
   //   <div>
