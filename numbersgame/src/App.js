@@ -5,7 +5,6 @@ import './App.css';
 
 
 const Stars = (props) => {
-  const numberOfStars = 9;
   let stars = [];
   for (let i=0; i<numberOfStars; i++){
   stars.push(<i className = "fa fa-star"></i>)
@@ -66,18 +65,7 @@ const Stars = (props) => {
     Numbers.list = _.range(1, 10);
     
   
-  class Game extends React.Component{
-  render(){
-  return(
-  <div layout="row">
-  <Stars/>
-  <Button/>
-  <Answer selectedNumber = {this.selectedNumber}/>
-  <Numbers selectedNumber = {this.selectedNumber}/>
-  </div>
-  );
-  }
-  }
+    
   
   class App extends React.Component {
   render(){
