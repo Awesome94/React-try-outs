@@ -3,6 +3,23 @@ import logo from './logo.svg';
 import './App.css';
 
 
+var possibleCombinationSum = function(arr, n) {
+  if (arr.indexOf(n) >= 0) { return true; }
+  if (arr[0] > n) { return false; }
+  if (arr[arr.length - 1] > n) {
+    arr.pop();
+    return possibleCombinationSum(arr, n);
+  }
+  var listSize = arr.length, combinationsCount = (1 << listSize)
+  for (var i = 1; i < combinationsCount ; i++ ) {
+    var combinationSum = 0;
+    for (var j=0 ; j < listSize ; j++) {
+      if (i & (1 << j)) { combinationSum += arr[j]; }
+    }
+    if (n === combinationSum) { return true; }
+  }
+  return false;
+};
 
 const Stars = (props) => {
   let stars = [];
@@ -18,12 +35,39 @@ const Stars = (props) => {
   
   
   const Button = (props) => {
-  return(
-    <div>
-      <button>=</button>
-    </div>
-  )
-  }
+    let button;
+    switch(props.answerIsCorrect) {
+    case true:
+    button =
+    <button className="btn btn-success" onClick={props.acceptAnswer}>
+    <i className="fa fa-check"></i>
+    </button>
+    break;
+    case false:
+      button = 
+      <button className="btn btn-danger">
+      <i className="fa fa-times"></i>
+      </button>;
+      break;
+      default:
+      button =
+      <button className = "btn" 
+      onClick={props.checkAnswer}
+      disabled={props.selectedNumbers.length === 0}>
+        =
+        </button>
+    }
+    return(
+      <div className="col-2">
+        {button}
+        <br /><br/>
+        <button className="btn btn-warning btn-sm" onClick = {props.redraw}>
+        <i className="fa fa-refresh"></i>
+        </button>
+      </div>
+    );
+    };
+  
   
   const Answer = (props) => { 
     return(
