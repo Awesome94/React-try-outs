@@ -69,15 +69,15 @@ const Stars = (props) => {
     };
   
   
-  const Answer = (props) => { 
-    return(
-    <div className="col-5">
-      {props.selectedNumbers.map((number, i) => 
-      <span key={i}>{number}</span>
-      )};
-    </div>
-    );
-    }
+    const Answer = (props) => { 
+      return(
+      <div className="col-5">
+        {props.selectedNumbers.map((number, i) => 
+        <span key={i} onClick={() => props.unslectNumber(number)}>{number}</span>
+        )}
+      </div>
+      );
+      }
   // const Numbers = (props) => {
   //   return(
   //   <div>
@@ -90,25 +90,29 @@ const Stars = (props) => {
   //   )
   // }
 // The numbers above where generated manually. Below we generate them automatically.
-  const Numbers = (props) => {
-    const numberClassName = (number) => {
-    if (props.selectedNumber.indexOf(number) >= 0) {
-    return 'selected';
-    }
-    }
-      return(
-      <div className = "card text-center">
-      <div>
-      {Numbers.list.map((number, i) =>
-       <span key = {i}>{number}</span>
-      )}
-     </div>
-      </div>
-      );
-    };
+const Numbers = (props) => {
+  const numberClassName = (number) => {
+  if (props.selectedNumbers.indexOf(number) >= 0) {
+  return 'used';
+  }
+  if (props.selectedNumbers.indexOf(number) >= 0) {
+  return 'selected';
+  }
+  }
+    return(
+    <div className = "card text-center">
+    <div>
+    {Numbers.list.map((number, i) =>
+     <span key={i} className={numberClassName(number)}
+     onClick={() => props.selectNumber(number)}>{number}</span>
+    )}
+   </div>
+    </div>
+    );
+  };
+
     Numbers.list = _.range(1, 10);
     
-  
     class Game extends React.Component{
       state = {
       selectedNumbers: [],
