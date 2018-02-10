@@ -3,8 +3,9 @@ import React, {PropTypes} from 'react';
 class CoursePage extends React.Component {
     constructor(props, context) {
         super(props, context);
+        
         this.state = {
-            course: {title: ''}
+            course: {title: ""}
         };
 
         this.onTitleChange = this.onTitleChange.bind(this);
@@ -18,7 +19,7 @@ class CoursePage extends React.Component {
     }
 
     onClickSave(){
-        alert('Saving ${this.state.course.title}');
+        alert(`Saving ${this.state.course.title}`);
     }
 
     render() {
